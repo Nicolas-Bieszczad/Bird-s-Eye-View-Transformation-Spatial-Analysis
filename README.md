@@ -72,6 +72,11 @@ A transformation matrix is computed using OpenCV's `getPerspectiveTransform` or 
 
 The transformation is then applied to the input image, producing a warped version approximating a top-down view.
 
+<p align="center">
+  <img src="images/BEV_test_4.jpg" alt="Base Image" width="45%" style="margin-right:10px;"/>
+  <img src="images/image2.jpg" alt="BEV" width="45%"/>
+</p>
+<p align="center"><strong>Figure 1:</strong> Example of BEV-transformed image.</p>
 
 ## Spatial Analysis via Segmentation
 
@@ -87,6 +92,11 @@ Such insights are valuable for assessing safety conditions, monitoring complianc
 
 Example inference results are illustrated below using the YOLOv11 segmentation model applied to BEV images.
 
+<p align="center">
+  <img src="images/BEV_test_4.jpg" alt="Base Image" width="45%" style="margin-right:10px;"/>
+  <img src="images/image2.jpg" alt="BEV Segmentation" width="45%"/>
+</p>
+<p align="center"><strong>Figure 2:</strong> Example segmentations using YOLOv11 on BEV-transformed images.</p>
 
 
 
