@@ -73,8 +73,8 @@ A transformation matrix is computed using OpenCV's `getPerspectiveTransform` or 
 The transformation is then applied to the input image, producing a warped version approximating a top-down view.
 
 <p align="center">
-  <img src="images/BEV_test_4.jpg" alt="Base Image" width="45%" style="margin-right:10px;"/>
-  <img src="images/image2.jpg" alt="BEV" width="45%"/>
+  <img src="BEV results/base_BEV.jpeg" alt="Base Image" width="45%" style="margin-right:10px;"/>
+  <img src="BEV results/result_BEV.png" alt="BEV" width="25%"/>
 </p>
 <p align="center"><strong>Figure 1:</strong> Example of BEV-transformed image.</p>
 
@@ -93,11 +93,14 @@ Such insights are valuable for assessing safety conditions, monitoring complianc
 Example inference results are illustrated below using the YOLOv11 segmentation model applied to BEV images.
 
 <p align="center">
-  <img src="images/BEV_test_4.jpg" alt="Base Image" width="45%" style="margin-right:10px;"/>
-  <img src="images/image2.jpg" alt="BEV Segmentation" width="45%"/>
+  <img src="BEV results/base_BEV.jpeg" alt="Base Image" width="45%" style="margin-right:10px;"/>
+  <img src="BEV results/result_BEV_seg.png" alt="BEV Segmentation" width="25%"/>
+  <img src="BEV results/base_BEV2.jpg" alt="Base Image" width="45%" style="margin-right:10px;"/>
+  <img src="BEV results/result_BEV_seg2.png" alt="BEV Segmentation" width="25%"/>
 </p>
 <p align="center"><strong>Figure 2:</strong> Example segmentations using YOLOv11 on BEV-transformed images.</p>
 
+Selecting appropriate input and output points is a critical step in ensuring the accuracy and usefulness of the bird’s eye view (BEV) transformation. When choosing the four source points on the original image, it is important to tightly enclose the region of interest where objects such as workers, equipment, or vehicles are located. Poorly selected points may exclude relevant areas or include unnecessary background, resulting in inaccurate transformations and reduced detection reliability. Equally important is the definition of the output (destination) points, which determine the geometric proportions of the transformed image. These points should be chosen to reflect realistic spatial dimensions, preserving object shapes and relative distances. Inappropriate output scaling can lead to distorted object appearances, which may hinder the performance of downstream object detection or segmentation models. Careful calibration of both source and destination points ensures that the BEV projection is both spatially meaningful and well-suited for reliable analysis.
 
 
 ## Conclusion and Outlook
