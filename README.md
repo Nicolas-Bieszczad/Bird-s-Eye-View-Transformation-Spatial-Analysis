@@ -1,5 +1,5 @@
 # Bird’s Eye View Transformation and Spatial Analysis
-Implement homography-based bird's eye view transformation to enable safety analysis.
+
 ## Introduction
 
 Understanding object locations and their spatial relationships is critical in applications such as surveillance, traffic analysis, and industrial safety monitoring. Conventional camera views often suffer from perspective distortion, making it difficult to accurately interpret spatial relationships between objects. Bird’s Eye View (BEV) transformation addresses this issue by providing a top-down perspective that approximates a real-world spatial layout. This report presents a methodology for applying BEV transformation using homography, followed by object segmentation application to facilitate spatial analysis.
